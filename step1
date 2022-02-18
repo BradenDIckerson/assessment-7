@@ -1,0 +1,24 @@
+Extra large Array:
+insert 1.0055334 s
+append 2.8609 ms
+
+large Array:
+insert: 9.246 ms
+append: 593 us
+
+
+medium Array:
+insert: 162.7 us 
+append: 125.4 us
+
+
+small array:
+insert: 43.3 us
+append:102.5 us
+
+tiny array:
+insert:31.6 us
+append:80 us
+
+
+The insert function scales the smaller arrays faster than append does. The append function does the opposite where it scales the larger arrays quicker. It seems that each function works its best depending on how large your array is. 
