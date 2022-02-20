@@ -1,16 +1,24 @@
-function uniqueCharacters(str)
-{
-     
- 
-    for(let i = 0; i < str.length; i++)
-        for(let j = i + 1; j < str.length; j++)
-            if (str[i] == str[j])
-                return false;
-    return true;
-            
+function hasUniqueChars (str) {
+      const charsHolder = [] 
     
-}
- 
+      for (let i = 0; i < str.length; i++) {
+        if (charsHolder.includes(str[i])) {
+            console.log(false)
+            return false     
+        }
+        else{
+          charsHolder.push(str[i]) 
+        }
+      }
+      console.log(true) 
+      return true
+    }
+    
 
 
-uniqueCharacters("monday")
+// hasUniqueChars("Monday");
+// -> True
+
+hasUniqueChars("Moonday");
+// -> False
+
